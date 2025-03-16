@@ -1,0 +1,13 @@
+export { default as amex } from './amex.png';
+export { default as apay } from './apay.png';
+export { default as applepay } from './applepay.png';
+export { default as discover } from './discover.png';
+export { default as gpay } from './gpay.png';
+export { default as lillian } from './lillian.png';
+export { default as mastercard } from './mastercard.png';
+export { default as paypal } from './paypal.png';
+export { default as reactLogo } from './react.svg';
+export { default as visa } from './visa.png';
+export { default as asset4 } from './asset4.jpeg';
+export { default as asset5 } from './asset5.jpeg';
+export { default as asset6 } from './asset6.jpeg';
