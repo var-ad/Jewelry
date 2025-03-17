@@ -16,7 +16,7 @@ function Layout({ children, onNavigate }) {
       <Header onNavigate={handleNavigate} activePage={activePage} />
 
       {/* Page Content */}
-      <main className="flex-grow container mx-0 p-0">
+      <main className="flex-grow w-full p-0">
         {children}
       </main>
 
