@@ -1,16 +1,25 @@
 import { FiSearch, FiUser, FiHeart, FiShoppingBag } from 'react-icons/fi';
+import { useNavigate } from 'react-router-dom';
 import * as assets from '../assets';
 
+function Header({ activePage }) {
+  const navigate = useNavigate();
 
-function Header({ onNavigate, activePage }) {
+  const handleNavigation = (path) => {
+    const formattedPath = path === 'home' ? '/' : `/${path.replace(/\s+/g, '-').toLowerCase()}`;
+    navigate(formattedPath);
+  };
+
   return (
     <header className="bg-white shadow-md h-26">
       <div className="container mx-auto px-6 py-3 flex items-center justify-between h-full">
         {/* Logo */}
         <div>
-            <img 
-            src={assets.lillian} alt="Logo" className="h-12 cursor-pointer"
-            onClick={() => onNavigate('home')}
+          <img 
+            src={assets.lillian} 
+            alt="Logo" 
+            className="h-12 cursor-pointer"
+            onClick={() => handleNavigation('home')}
           />
         </div>
 
@@ -19,7 +28,7 @@ function Header({ onNavigate, activePage }) {
           {['Home', 'Category', 'Collections', 'Shop', 'Offers', 'Gift Store'].map((item) => (
             <button
               key={item}
-              onClick={() => onNavigate(item.toLowerCase())}
+              onClick={() => handleNavigation(item)}
               className={`text-gray-700 hover:text-blue-500 font-medium ${
                 activePage === item.toLowerCase() ? 'border-b-2 border-blue-500' : ''
               }`}

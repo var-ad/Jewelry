@@ -39,3 +39,4 @@ export { default as g1 } from './g1.png';
 export { default as g2 } from './g2.png';
 export { default as g3 } from './g3.png';
 export { default as g4 } from './g4.png';
+export { default as h1 } from './h1.png';

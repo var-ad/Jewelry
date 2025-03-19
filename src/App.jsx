@@ -1,9 +1,7 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Layout from './components/layout';
 import Home from './pages/home';
-import Store from './pages/store';
-import Login from './pages/login';
-import Signup from './pages/signup';
+import E404 from './pages/E404'; // Importing the 404 component
 
 function App() {
   return (
@@ -11,10 +9,8 @@ function App() {
       <Layout>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/store" element={<Store />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/signup" element={<Signup />} />
-          <Route path="*" element={<div>404 Not Found</div>} />
+          <Route path="/home" element={<Navigate to="/" replace />} />
+          <Route path="*" element={<E404 />} />
         </Routes>
       </Layout>
     </Router>
