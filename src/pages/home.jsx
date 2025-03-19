@@ -177,8 +177,11 @@ function Home() {
 
           <div className="text-center my-10">
   </div>
+</div>
 
+<div className="text-center">
   <h2 className="text-blue-500 text-xl font-semibold">Featured In</h2>
+  </div>
   
   {/* Decorative line */}
   <div className="flex justify-center items-center mt-2">
@@ -188,22 +191,79 @@ function Home() {
   </div>
 
   {/* Logo grid */}
-  <div className="grid grid-cols-4 gap-8 mt-6">
-    {[assets.f1, assets.f2, assets.f3, assets.f4, assets.f5, assets.f6, assets.f7].map((item, index) => (
-      <div 
-        key={index} 
-        className="flex justify-center items-center"
-      >
-        <img 
-          src={item} 
-          alt={`Logo ${index + 1}`} 
-          className="h-16 object-contain"
-        />
-      </div>
-    ))}
-  </div>
-  </div>
+  <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 place-items-center mt-6">
+  {[
+    assets.f1, assets.f2, assets.f3, 
+    assets.f4
+  ].map((item, index) => (
+    <div 
+      key={index} 
+      className="flex justify-center items-center self-center"
+    >
+      <img 
+        src={item} 
+        alt={`Logo ${index + 1}`} 
+        className="h-16 object-contain"
+      />
+    </div>
+  ))}
+</div>
+<div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8 place-items-center mt-6">
+  {[
+    assets.f5, assets.f6, 
+    assets.f7
+  ].map((item, index) => (
+    <div 
+      key={index} 
+      className="flex justify-center items-center self-center"
+    >
+      <img 
+        src={item} 
+        alt={`Logo ${index + 1}`} 
+        className="h-16 object-contain"
+      />
+    </div>
+  ))}
+</div>
 
+<div className="grid grid-cols-4 gap-4 bg-gray-100 py-12 pt-12 mt-6 mb-6">
+  <div className="flex flex-col items-center">
+    <img src={assets.g1} alt="g1" className="h-12 mb-2" />
+    <p className="text-center font-bold text-md text-gray-900">Complementary Shipping & Return</p>
+    <p className="text-center mt-4 text-md text-gray-900">We offer complementary shipping and returns on all orders.</p>
+    <div className="flex items-center gap-1 mt-2 cursor-pointer">
+        <span className="text-gray-900">Learn More</span>
+        <span className="text-gray-900">→</span>
+    </div>
+  </div>
+  <div className="flex flex-col items-center">
+    <img src={assets.g2} alt="g2" className="h-12 mb-2" />
+    <p className="text-center font-bold text-md text-gray-900">Book an Appointment</p>
+    <p className="text-center mt-4 text-md text-gray-900">We’re happy to help with in-store or vertual appointments.</p>
+    <div className="flex items-center gap-1 mt-2 cursor-pointer">
+        <span className="text-gray-900">Book Now</span>
+        <span className="text-gray-900">→</span>
+    </div>
+  </div>
+  <div className="flex flex-col items-center">
+    <img src={assets.g3} alt="g3" className="h-12 mb-2" />
+    <p className="text-center font-bold text-md text-gray-900">At Your Service</p>
+    <p className="text-center mt-4 text-md text-gray-900">Our customer care experts are always here to help you.</p>
+    <div className="flex items-center gap-1 mt-2 cursor-pointer">
+        <span className="text-gray-900">Contact Us</span>
+        <span className="text-gray-900">→</span>
+    </div>
+  </div>
+  <div className="flex flex-col items-center">
+    <img src={assets.g4} alt="g4" className="h-12 mb-2" />
+    <p className="text-center font-bold text-md text-gray-900">Payment Options</p>
+    <p className="text-center mt-4 text-md text-gray-900">Explore our flexible payment options designed to fit every budget.</p>
+    <div className="flex items-center gap-1 mt-2 cursor-pointer">
+        <span className="text-gray-900">Learn More</span>
+        <span className="text-gray-900">→</span>
+    </div>
+  </div>
+  </div>
 
   </div>
   );

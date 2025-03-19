@@ -35,3 +35,7 @@ export { default as f4 } from './f4.png';
 export { default as f5 } from './f5.png';
 export { default as f6 } from './f6.png';
 export { default as f7 } from './f7.png';
+export { default as g1 } from './g1.png';
+export { default as g2 } from './g2.png';
+export { default as g3 } from './g3.png';
+export { default as g4 } from './g4.png';
