@@ -86,6 +86,11 @@ button {
   transition: border-color 0.25s;
 }
 
+#button3 { 
+  cursor: pointer;
+  background-color: #008CA1;
+}
+
 button:hover {
   border-color: #646cff;
 }

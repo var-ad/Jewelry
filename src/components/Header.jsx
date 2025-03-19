@@ -41,7 +41,9 @@ function Header({ activePage }) {
         {/* Icons */}
         <div className="flex items-center space-x-8">
           <FiSearch className="w-5 h-5 cursor-pointer text-gray-600 hover:text-blue-500" />
-          <FiUser className="w-5 h-5 cursor-pointer text-gray-600 hover:text-blue-500" />
+          <a href="/login" rel="login">
+            <FiUser className="w-5 h-5 cursor-pointer text-gray-600 hover:text-blue-500" />
+          </a>
           <FiHeart className="w-5 h-5 cursor-pointer text-gray-600 hover:text-blue-500" />
           <FiShoppingBag className="w-5 h-5 cursor-pointer text-gray-600 hover:text-blue-500" />
         </div>
